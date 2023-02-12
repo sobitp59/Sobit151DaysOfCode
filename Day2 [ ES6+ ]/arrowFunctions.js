@@ -121,7 +121,6 @@ const data = {
     lastName : 'Prasad',
     fullName : function(){
         setTimeout(function(){
-            console.log('data st ' + this)
             console.log('2 ' + this.firstName + " " +this.lastName);
         }, 1000)
         }
@@ -138,3 +137,50 @@ const data2 = {
     }
 }
 data2.fullName2()
+
+
+// if a function(method) is inside object, 'this' references that object
+// if it is a regular function, 'this' refernces to global object
+
+// const video = {
+//     title : 'Video Title',
+//     play : function(){
+//         console.log(this)
+//     }
+// }
+// video.play()
+
+// function playVideo(){
+//     console.log(this)
+// }
+// playVideo()
+
+const video = {
+    title : 'Title',
+    tags : ['v1', 'v2', 'v3'],
+    showTags : function(){
+        this.tags.forEach(function(tag){
+            console.log(tag, this.title)
+        })
+    }
+}
+
+video.showTags()
+// v1 undefined
+// v2 undefined
+// v3 undefined
+
+const video2 = {
+    title : 'Title 2',
+    tags : ['V1', 'V2', 'V3'],
+    showTags : function(){
+        this.tags.map(tag => {
+            console.log(tag, this.title)
+        })
+    }
+}
+
+video2.showTags()
+// V1 Title 2   
+// V2 Title 2   
+// V3 Title 2 
