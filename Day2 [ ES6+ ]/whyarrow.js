@@ -131,3 +131,50 @@ const add = (...args) => {
 }
 
 console.log('Total : ' + add(1,2,3,4,5))
+
+
+
+// 04 Use as Callbacks: Arrow functions are often used as 
+// callbacks in event handlers, promise handlers, and other 
+// asynchronous code. Because of their concise syntax and 
+// lexically-scoped this keyword, they are a convenient way
+// to write callbacks that are clean, readable, and easy to understand.
+
+// TRADITIONAL WAY
+function Person(name){
+    this.name = name
+}
+
+Person.prototype.sayHello = function(){
+    console.log(`Hello! my name is ${this.name}`)
+}
+
+const person = new Person('Mohan')
+person.sayHello()
+
+// ARROW FUNCTION WAY
+
+// const Employee = (name) => { ❌ : ERROR
+//     this.name = name
+// }
+
+// Employee.prototype.sayHi = function(){
+//     console.log(`Hi, my name is ${this.name}`)
+// }
+
+// const e1 = new Employee('Rajesh')
+// e1.sayHi()
+
+
+// MISC //
+const Employee = {
+    name : '',
+    sayHi : function(){
+        console.log(`hi, my name is ${this.name}`)
+    }
+}
+
+
+const e1 = Object.create(Employee)
+e1.name = 'Tanay Pratap'
+e1.sayHi()
