@@ -24,7 +24,7 @@ const Add33andReturn = num => num + 33;
 console.log(Add33andReturn(40))
 
 
-// 01 Lexical this: Arrow functions have a lexically-scoped this
+// 02 Lexical this: Arrow functions have a lexically-scoped this
 // keyword, which means that the value of this inside an arrow
 // function is the same as the value of this in the outer scope.
 // This can be useful in situations where you need to access the this
@@ -102,3 +102,32 @@ video2.showTags()
 // V1 Title 2   
 // V2 Title 2   
 // V3 Title 2 
+
+
+//03 No arguments object: Arrow functions do not have an arguments object,
+// which can simplify your code and reduce the possibility of bugs.
+// If you need to access the arguments passed to a function, you can 
+// use the ... operator to spread the arguments into an array.
+
+// TRADITIONAL WAY
+function sum(){
+    let sum = 0
+    for(let i = 0; i < arguments.length; i++){
+        sum += arguments[i] // arguments : OBJECT
+    }
+    return sum
+}
+
+console.log('Total Sum : ' + sum(1,2,3))
+
+// ARROW FUNCTION WAY
+const add = (...args) => {
+    let total = 0
+    console.log(args)
+    for ( i = 0; i < args.length; i++) {
+        total += args[i]  // args : ARRAY
+    }
+    return total
+}
+
+console.log('Total : ' + add(1,2,3,4,5))
