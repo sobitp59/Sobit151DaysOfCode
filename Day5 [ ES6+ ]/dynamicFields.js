@@ -17,7 +17,8 @@ const person = {
     city : 'Guwahati'
 }
 
-person['gmail'] = 'sobitprasad@gmail.com'
+// person.gmail = 'sobitprasad@gmail.com'
+person[gmail] = 'sobitprasad@gmail.com'
 console.log(person)
 console.log(person.gmail)
 console.log(person['gmail'])
