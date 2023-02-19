@@ -12,6 +12,6 @@ console.log(example.padEnd(1));
 // Displaying credit card numbers
 const cardNumber = '2012 4434 1121 2342';
 const last4digit = cardNumber.slice(-4);
-const maskedNumber = last4digit.padStart(cardNumber.length, "*")
+const maskedNumber = last4digit.padStart(cardNumber.length-4, "*")
 console.log(maskedNumber) // ***************2342
 
