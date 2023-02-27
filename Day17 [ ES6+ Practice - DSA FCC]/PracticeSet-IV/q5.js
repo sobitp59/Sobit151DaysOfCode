@@ -3,17 +3,19 @@
 // Your ES6 code here
 const makeCapital = (word) => {
     let capitalizeWord = ''
-    for(let letter of word){
-        capitalizeWord = String.fromCharCode((letter.charCodeAt() - 32))
+    for(let i = 0; i  < word.length; i++ ){
+       capitalizeWord += String.fromCharCode(word.charCodeAt(i) - 32);
     }
-    console.log(capitalizeWord)
+    return capitalizeWord;
 }
-makeCapital('SobiT')
 
 const capitalizeWords = (words) => {
-
+    for(let i = 0; i < words.length; i++){
+        words[i] = makeCapital(words[i]) 
+    }
+    return words;
 }
 
 
 console.log(capitalizeWords(["eat", "sleep", "code", "repeat"]))
-// ["EAT", "SLEEP", "CODE", "REPEAT"]
+// // ["EAT", "SLEEP", "CODE", "REPEAT"]
