@@ -4,7 +4,7 @@
 const getValues = (arrObj, propName) => {
     const arrObjPropName = [] 
     for(let index = 0; index < arrObj.length; index++){
-        arrObjPropName[index] = arrObj[index][propName];
+        arrObjPropName[index] = arrObj[index].propName;
     }
     return arrObjPropName;
 }

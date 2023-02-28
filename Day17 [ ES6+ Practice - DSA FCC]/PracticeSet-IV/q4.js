@@ -5,7 +5,7 @@ const filterWords = (words) => {
     let arrayGreaterThanFive = [];
     for(const word of words){
         if(word.length > 5){
-            arrayGreaterThanFive.push(word);
+            arrayGreaterThanFive[arrayGreaterThanFive.length] = word;
         }
     }
     return arrayGreaterThanFive;

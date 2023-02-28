@@ -3,7 +3,7 @@
 //else do nothing and return the same object. Avoid using in-built methods.
 
 // Your ES6 code here
-const checkForTeam = ({team}) => teamData.team ? teamData : {...teamData, team : "A"};
+const checkForTeam = (teamData) => teamData.team ? teamData : {...teamData, team : "A"};
 
 
 

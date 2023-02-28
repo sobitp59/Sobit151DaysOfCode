@@ -2,7 +2,7 @@
 // Your ES6 code here
 
 const getMaxElement = (arr) => {
-    let maxElement = -99999999;
+    let maxElement = -Infinity;
     for(let num of arr){
         if(num >= maxElement){
             maxElement = num;
