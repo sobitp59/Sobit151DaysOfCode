@@ -73,3 +73,8 @@ const customers = [
 console.log(getLoyalOldCustomers(customers));
 // Output: [ 'Alice', 'Eve' ]  
 // getLoyalOldCustomers(customers);
+
+
+
+
+
