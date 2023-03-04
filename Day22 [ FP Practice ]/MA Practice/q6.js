@@ -7,6 +7,10 @@ const obj = {
               {name: 'Shivam', company: 'No Broker'}                            ]
         }
 
-const getNames = ({details}) => details.filter(({name}) => name.startsWith('A'));
+// const getNames = ({details}) => details.filter(({name}) => name.startsWith('A'));
+const getNames = obj => {
+      const {details} = obj;
+      return details.filter(({name}) => name.startsWith('A'))
+}
 console.log(getNames(obj));
 // [ { name: 'Ankit', company: 'Chalo' } ]

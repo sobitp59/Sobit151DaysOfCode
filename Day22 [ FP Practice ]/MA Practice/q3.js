@@ -3,7 +3,10 @@
 
 const numbers = [1,2,3,4,5,6,7,8,9];
 
-const getNumbers = numbers => numbers.map((number, index) => !(index%2) ? number - 2 : (number%2) && number + 3 );
+const getNumbers = numbers => numbers.map((number, index) =>  index % 2 ?  number + 3 : number - 2 );
 
 console.log(getNumbers(numbers));
-// [ -1, 0, 1, 0, 3, 0, 5, 0, 7 ]
+// [
+//     -1, 5,  1, 7, 3,
+//      9, 5, 11, 7    
+//   ]

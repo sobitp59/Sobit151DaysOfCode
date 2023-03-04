@@ -8,7 +8,13 @@ const obj = {details:[{name: 'Ankit', company: 'Chalo'},
                     ]}
 
 
-const getCompanyNames = ({details}) => details.map(({company}) => company);
+
+// const getCompanyNames = ({details}) => details.map(({company}) => company);
+const getCompanyNames = obj => {
+    const {details} = obj;
+    return details.map(({company}) => company)
+}
+
 console.log(getCompanyNames(obj))                
 
 // Output: ['Chalo', 'Razorpay', 'No Broker']
