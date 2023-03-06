@@ -1,4 +1,3 @@
-// 01: Find the sum of all members workExp sum who are permanent (isPermenant)?
 
 let members =
 [
@@ -39,10 +38,17 @@ let members =
   },
 ];
 
-
+// 01: Find the sum of all members workExp sum who are permanent (isPermenant)?
 const getTotalExp = members => members.reduce((totalWorkEXp, member) => {
     const {workExp, isPermanent} = member;
     return isPermanent ? totalWorkEXp + workExp : totalWorkEXp;
 }, 0)
+console.log(getTotalExp(members)) // 45
 
-console.log(getTotalExp(members))
+
+// Find the total score of employees who are permanent? score = workExp + deptExp
+const getTotalScore = members => members
+                                .filter(({isPermanent}) => isPermanent)
+                                .map((member) => ({...member, totalScore : member.workExp + member.deptExp }))
+
+console.log(getTotalScore(members))
