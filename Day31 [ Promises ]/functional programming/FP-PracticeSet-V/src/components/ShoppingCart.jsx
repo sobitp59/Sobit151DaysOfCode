@@ -14,9 +14,11 @@ const ShoppingCart = () => {
   return (
     <div>
         <h2>shopping cart</h2>
-        {items.map((item) => {
-            return <li>{item.name} : {item.price}</li>;
-        })}
+        <ul>
+            {items.map((item) => {
+                return <li key={item.id}>{item.name} : {item.price}</li>;
+            })}
+        </ul>
         <p>total price : {total}</p>
     </div>
   )

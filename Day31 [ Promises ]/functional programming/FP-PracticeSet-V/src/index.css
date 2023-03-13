@@ -13,3 +13,7 @@ body{
   border: 3px solid black;
   font-family: 'Manrope', sans-serif;
 }
+
+.App > *{
+  margin: 20px 0;
+}
