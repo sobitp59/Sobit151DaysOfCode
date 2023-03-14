@@ -8,16 +8,8 @@ const users = [
   { id: 5, name: 'Eve', friends: ["Bob", "Charlie"] }
 ];
 
-const getUserWithMostFriends = users => users.reduce((maxFriends, {name, friends}) => {
-    if(friends.length > maxFriends){
-        maxFriends = friends.length;
-        return maxFriends;
-    }else if(friends.length === maxFriends){
-        return name;
-    }
-    return maxFriends;
-    
-     
-}, 0)
+const getUserWithMostFriends = users => users.reduce((prev, currentUser) => {
+    return currentUser.friends.length > prev.friends.length ? currentUser : prev; 
+}).name;
 
 console.log(getUserWithMostFriends(users));
