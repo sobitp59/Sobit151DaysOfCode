@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Call</title>
+</head>
+<body>
+    <div>
+        <h1>making an api call</h1>
+        <p>with error</p>
+        <h3 id="output1"></h3>
+        
+        <p>without error</p>
+        <h3 id="output2"></h3>
+    </div>
+
+
+
+
+    <script>
+        // Use this URL - https://example.com/api/itemlist to make a fake fetch call and handle errors if any. Show a proper message to the user on the DOM, as per the status and message received from the server. A fakeFetch has been provided. Use HTML, CSS & JS template in REPL or Vanilla template in CodeSandbox for this question.
+
+
+        const outputError = document.getElementById('output1');
+        const outputSuccess = document.getElementById('output2');
+
+        const fakeFetch = (url) => {
+            return new Promise((resolve, reject) => {
+                if(url === 'https://example.com/api/itemlist'){
+                    reject(
+                        {
+                            status: 404,
+                            message : 'Items list not found.'
+                        }
+                    )
+                }else{
+                    resolve({
+                        status: 200,
+                        message : "success",
+                        data : [
+                            { item : 'bread', price : 20},
+                            { item : 'butter', price : 40},
+                            { item : 'milk', price : 50}
+                        ]
+                    })
+                }
+            })
+        }
+
+        // error
+        fakeFetch('https://example.com/api/itemlist')
+        .then(response => console.log(response))
+        .catch(error => outputError.textContent = error.message);
+
+        
+        // success
+        fakeFetch('https://example.com/api/itemlists')
+        .then(response => response.data.map(({item}) => outputSuccess.textContent += item + ' '))
+        .catch(error => alert(error.message));
+
+
+    </script>
+</body>
+</html>

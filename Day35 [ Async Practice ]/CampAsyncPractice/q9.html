@@ -1,0 +1,86 @@
+<!-- Use this URL - https://example.com/api/itemlist to make a fake fetch call and list out all the items as an ordered list on the DOM. A fakeFetch has been provided. Use HTML, CSS & JS template in REPL or Vanilla template in CodeSandbox for this question. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api call</title>
+</head>
+<body>
+    <h1>product lists</h1>
+    <ol id="output">
+
+    </ol>    
+
+
+
+
+    <script>
+        // const fakeFetch = (url) => {
+        // return new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //     if (url === "https://example.com/api/itemlist") {
+        //         resolve({
+        //         status: 200,
+        //         message: "Success",
+        //         data: [
+        //             { itemName: "Bread", price: 30, quantity: 10 },
+        //             { itemName: "Water Bottle", price: 50, quantity: 50 },
+        //             { itemName: "Dairy Milk", price: 20, quantity: 30 }
+        //         ]
+        //         });
+        //     } else {
+        //         reject({
+        //         status: 404,
+        //         message: "Items list not found."
+        //         });
+        //     }
+        //     }, 2000);
+        // });
+        // };
+
+        const fakeFetch = (url) => {
+            return new Promise((resolve, reject) => {
+                if(url === 'https://example.com/api/itemlist'){
+                    resolve({
+                        status : 200,
+                        message : 'Success',
+                        data : [
+                            { itemName: "Bread", price: 30, quantity: 10 },
+                            { itemName: "Water Bottle", price: 50, quantity: 50 },
+                            { itemName: "Dairy Milk", price: 20, quantity: 30 }
+                        ]
+                    })
+                }else{
+                    reject({
+                        status :404,
+                        message : 'Items list not found.'
+                    })
+                }
+            })
+        }
+
+    // Your Code here
+    const output = document.getElementById('output');            
+
+    fakeFetch('https://example.com/api/itemlist')
+   .then(({data}) => {
+       console.log(data) 
+        return output.innerHTML = data.map(({itemName, price, quantity}) => {
+            return `<li>${itemName} -- INR ${price} -- ${quantity} </li>`
+        })
+   })
+   .catch((error) => console.log(error))
+
+
+
+// Output on the DOM should be in the format, {itemName} -- INR {price} -- {quantity}:
+// 1. Bread -- INR 30 -- 10
+// 2. Water Bottle -- INR 50 -- 50
+// 3. Dairy Milk -- INR 20 -- 30
+    </script>
+</body>
+</html>
