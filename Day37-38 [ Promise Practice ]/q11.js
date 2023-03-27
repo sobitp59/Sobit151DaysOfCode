@@ -6,7 +6,7 @@ const second = async () => {setTimeout(()=>{
     }
     
 const first = () => new Promise(async (resolve,reject)=> {
-      const value=second()
+      const value= second()
       console.log('a',value);
     setTimeout(()=> {
       console.log('c');

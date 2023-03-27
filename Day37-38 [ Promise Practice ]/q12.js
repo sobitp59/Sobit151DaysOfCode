@@ -26,9 +26,37 @@ const first = () => new Promise(async (resolve,reject)=> {
 
 
 
-    console.log('d');
-    console.log(first().then((data)=>console.log(data)));
-    console.log('e');
+  console.log('d');
+  console.log(first().then((data)=>console.log(data)));
+  console.log('e');
+
+// d
+// g
+// a Promise
+// peomise pending
+// e
+// h
+// f
+// c
+// b
+// i
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // d

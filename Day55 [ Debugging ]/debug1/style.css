@@ -1,0 +1,13 @@
+body{
+    background: rgb(1, 0, 44);
+    color: rgb(54, 253, 121);
+}
+
+a{
+    background-color: aqua;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    background: linear-gradient(0.23turn, red, green)
+}
