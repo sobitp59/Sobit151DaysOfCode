@@ -22,7 +22,7 @@ const Cart = () => {
   return (
     <div className='box'>
         <h1>shopping cart</h1>
-        <button onClick={getFilteredItems}>fetch items greater than 100</button>
+        <button style={{padding : '12px 15px', borderRadius : '66px', border : 'none', background : '#7b03ff', color : '#ffffff', outline: '3px solid #ffffff2e'}} onClick={getFilteredItems}>fetch items greater than 100</button>
         <div>
             {
                 cartItems.map(({name, price, quantity}) => {
