@@ -1,3 +1,5 @@
+import Chat from "./components/Chat"
+import Comments from "./components/Comments"
 import Products from "./components/Products"
 import UserFeed from "./components/UserFeed"
 import UserProfile from "./components/UserProfile"
@@ -16,6 +18,8 @@ function App() {
         height='300px'
       />
       <UserFeed /> 
+      <Chat />
+      <Comments />
     </div>
   )
 }
