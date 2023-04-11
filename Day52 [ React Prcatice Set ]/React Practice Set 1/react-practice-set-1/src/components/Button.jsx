@@ -8,9 +8,13 @@ const Button = ({backgroundColor, color, borderRadius, padding}) => {
             color : color,
             borderRadius : borderRadius,
             padding : padding     
-        }}
-        >start
-        </button>
+        }}>start</button>
+
+        {/* suggested by abhay
+          <button style={{backgroundColor, color, borderRadius, padding}}>
+            start
+          </button> 
+        */}
     </div>
   )
 }

@@ -18,6 +18,14 @@ const Product = ({products}) => {
                 products.filter(({quantity, sales}) => sales > quantity)
                 .map(({name, quantity, sales}) => <li>name: {name}, sales:{sales}, quantity:{quantity}</li>)
             }
+            
+            {/* suggested by abhay */}
+            {
+                products.reduce((productLists, product) => {
+                    product.sales > product.quantity && productLists.push(<li>{product}</li>)
+                    return productLists
+                }, [])
+            }
         </ul>
     </div>
   )
