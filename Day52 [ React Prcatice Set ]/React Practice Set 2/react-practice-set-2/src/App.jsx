@@ -1,6 +1,7 @@
 import Gadgets from "./Gadgets"
 import About from "./components/About"
 import Article from "./components/Article"
+import ColorBox from "./components/ColorBox"
 import ColorPicker from "./components/ColorPicker"
 import Greeting from "./components/Greeting"
 import MyGadgets from "./components/MyGadgets"
@@ -128,9 +129,9 @@ const productlist = [
 
 
 // q9
-const red = '#EE4B2B'
-const blue = '#89CFF0'
-const green = '#7FFFD4'
+// const red = '#EE4B2B'
+// const blue = '#89CFF0'
+// const green = '#7FFFD4'
 
 // q10
 const todoItems = [
@@ -196,10 +197,13 @@ function App() {
       <MyGadgets productlist={productlist}/>
 
       {/* q9 */}
-      <ColorPicker red={red} green={green} blue={blue}/>
+      <ColorPicker/>
 
       {/* q10 */}
       <Todo todoItems={todoItems}/>
+
+      {/* extra */}
+      <ColorBox />
     </div>
   )
 }
