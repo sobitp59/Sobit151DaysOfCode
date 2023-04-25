@@ -1,0 +1,11 @@
+
+.video__card{
+  width: 300px;
+  border: 2px solid ;
+  margin: 30px;
+  list-style: none;
+}
+
+.video__card img{
+  width: 100%;
+}

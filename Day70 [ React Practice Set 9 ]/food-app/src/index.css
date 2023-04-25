@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap');
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body{
+    width: 100%;
+}
+
+.header{
+    width: 100%;
+    border-bottom: 2px solid;
+    font-size: 1.5rem;
+    /* padding-top: 40px; */
+    /* padding-bottom  : 40px; */
+}
+
+
+.food__card{
+    width: 300px;
+    border: 2px solid;
+}
+
+.food__image{
+    width: 100%;
+}
+
+.menu{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    place-content: center;
+    gap: 30px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.logo-nav{
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 166, 0, 0.671);
+    border-radius: 6px;
+    /* padding: 5px; */
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    outline: 2px solid rgba(255, 123, 0, 0.199);
+    margin-right: 5px;
+}
+
+@media (max-width: 400px) {
+    body{
+        /* background-color: red; */
+    }
+
+    .header{
+        border-bottom: 2px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bolder;
+       
+    }
+  }
