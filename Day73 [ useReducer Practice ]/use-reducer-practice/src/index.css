@@ -1,0 +1,7 @@
+
+
+
+.todoapp__wishlists{
+display: flex;
+flex-direction: column;
+}
