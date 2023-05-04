@@ -1,0 +1,275 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap');
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primary-color : rgb(132, 0, 255);
+  /* --primary-color : rgba(132, 0, 255, 0.329); */
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  font-family: 'Manrope', sans-serif;
+  text-transform: lowercase;
+}
+
+.email__subject{
+  color: var(--primary-color);
+}
+
+.email__header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.email__footer{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  place-content: center;
+
+}
+
+
+.email__content{
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.527);
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.email__star{
+  background-color: transparent;
+  border: 1px solid rgb(132, 0, 255);
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.star{
+  color: rgb(132, 0, 255);
+}
+
+
+
+.email__card{
+  margin: 20px auto;
+  border: 2px solid rgba(132, 0, 255, 0.103);
+  padding: 20px;
+  list-style: none;
+  border-radius: 15px;
+}
+
+
+.email__content{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.email__logo{
+  text-align: center;
+  padding: 20px 0;
+  /* border-bottom: 2px solid rgba(0, 0, 0, 0.164); */
+}
+
+.email__logolink{
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--primary-color);
+  font-weight: 800;
+
+}
+
+.logo{
+  font-size: 15px;
+  width: 15px ;
+  height: 15px;
+  background-color: var(--primary-color);
+  padding: 4px;
+  color: rgb(255, 246, 246);
+  border-radius: 6px;
+  margin-right: 5px;
+  outline: 4px solid rgba(132, 0, 255, 0.068);
+}
+
+.email__navbar{
+  width: 100%;
+  height: 8dvh;
+  display: grid;
+  /* place-content: center; */
+
+ grid-template-columns: 1fr 1fr 1fr;
+}
+
+.email__navlink{
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.email__button{
+  background: transparent;
+  border: 1.5px solid rgb(132, 0, 255);
+  padding: 2px 6px;
+  margin-right: 5px;
+  border-radius: 4px;
+  font-family: 'Manrope', sans-serif;
+  cursor: pointer;
+}
+
+.email__button:hover{
+  background: rgba(132, 0, 255, 0.096);
+}
+
+.email__details{
+  color: rgb(132, 0, 255);
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.email__title{
+  color: rgb(132, 0, 255);
+}
+
+.email__mainpage{
+  width: 95%;
+  margin: auto;
+
+}
+
+.email__fieldset{
+  border: 2px solid rgb(132, 0, 255);
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.email__legened{
+  color: rgb(132, 0, 255);
+  background-color: rgba(132, 0, 255, 0.096);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+}
+
+.email__filters{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.email__search{
+  width: 100%;
+  padding: 8px;
+  border: 1px solid rgba(132, 0, 255, 0.151);
+  border-radius: 4px;
+  outline: none;
+  font-family: 'Manrope', sans-serif;
+}
+
+.email__search::-webkit-input-placeholder { 
+  font-family: 'Manrope', sans-serif;
+}
+
+.email__search:-moz-placeholder { 
+  font-family: 'Manrope', sans-serif;
+}
+
+.email__checkboxes{
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.email__checkbox{
+  margin-left: 5px;
+  accent-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.no_email_found{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(132, 0, 255);
+}
+
+.email__detailpage{
+  width: 90%;
+  height: 50vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: left,
+}
+
+.email__view{
+  margin-bottom: 20px;
+}
+
+.email__content--view{
+margin-bottom: 20px;
+}
+
+.email{
+  padding-bottom: 8vh;
+}
+
+@media (max-width : 400px){
+  body{
+    position: relative;
+    height: 100dvh;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .email__page{
+    width: 95%;
+    margin:0 auto;
+  }
+
+
+  .email__navbar{
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid rgba(132, 0, 255, 0.158);
+  }
+
+  .email__navlink{
+    color: var(--primary-color);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+@media (min-width : 401px){
+  .email__mainpage{
+    width: 50%;
+    margin: auto;
+  }
+}
