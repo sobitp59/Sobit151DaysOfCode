@@ -5,6 +5,10 @@ const Inbox = () => {
   const {mails, searchQuery, showUnread, showStarred, showUnreadEmails, showStarredEmails, handleSearchMail} =  useEmail();
 
 
+  // showUnread : false,
+  //   showStarred : false,
+  //   searchQuery : '' 
+
   const unreadMails = mails.filter(({unread}) => unread)
   const starredMails = mails.filter(({isStarred}) => isStarred)
   const starredAndUnread = mails.filter(({isStarred, unread}) => isStarred && unread);
@@ -31,7 +35,7 @@ const Inbox = () => {
         <section>
 
         <label htmlFor="">
-          <input className='email__search' type="text" placeholder='search mail' onChange={handleSearchMail}/>
+          <input className='email__search' type="text" value={searchQuery} placeholder='search mail' onChange={handleSearchMail}/>
         </label>
         </section>
 
@@ -40,11 +44,11 @@ const Inbox = () => {
 
         <label htmlFor="" >
           show unread mails
-          <input className='email__checkbox' type="checkbox" onChange={showUnreadEmails}/>
+          <input className='email__checkbox' checked={showUnread} type="checkbox" onChange={showUnreadEmails}/>
         </label>
         <label htmlFor="">
           show starred mails
-          <input className='email__checkbox' type="checkbox" onChange={showStarredEmails}/>
+          <input className='email__checkbox' checked={showStarred} type="checkbox" onChange={showStarredEmails}/>
         </label>
       
         </section>
